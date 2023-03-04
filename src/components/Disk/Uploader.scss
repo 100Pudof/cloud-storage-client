@@ -1,0 +1,41 @@
+.uploader {
+  position: fixed;
+  padding: 10px 0 10px 10px;
+  left: 0;
+  bottom: 0;
+  width: 500px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #E9E6E6;
+  border-radius: 8px;
+
+  .close_upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .file_name {
+    margin-right: 10px;
+    height: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    max-width: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* max-width: ;*/
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px; /* ширина для вертикального скролла */
+    height: 4px; /* высота для горизонтального скролла */
+    background-color: white;
+  }
+
+  /* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+    background-color: #1976d2;
+    border-radius: 3px;
+  }
+
+}

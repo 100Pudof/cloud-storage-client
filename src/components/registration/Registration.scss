@@ -1,0 +1,49 @@
+@use "src/styles/Variables";
+
+.reuse_form {
+  display: flex;
+  width: 100%;
+
+  .form {
+    margin: 100px auto;
+    padding: 25px 33px;
+    max-width: 450px;
+    width: 100%;
+    color: Variables.$text-color;
+    background: #FFFFFF;
+    border-radius: 27px;
+
+    .h1 {
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      text-align: center;
+    }
+
+    .field {
+      width: 100%;
+    }
+
+    .error {
+      font-size: 14px;
+      color: red;
+      opacity: 0;
+      transition: all .4s linear;
+      min-height: 14px;
+
+      &.show {
+        transition: all .4s linear;
+        opacity: 1;
+      }
+    }
+
+    .btn_submit {
+      padding-top: 8px;
+      max-width: 120px;
+      width: 100%;
+      margin-left: 69%;
+      text-transform: none;
+    }
+  }
+}

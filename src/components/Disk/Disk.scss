@@ -1,0 +1,144 @@
+.disk {
+  width: 100%;
+  height: calc(100vh - 50px);
+
+  .nav_buttons {
+    margin: 45px 0 15px 0;
+    display: flex;
+
+    img {
+      padding: 9px 15px;
+      border: 1px solid #566885;
+      border-radius: 37px;
+    }
+
+    .MuiInputBase-root {
+      margin-left: 15px;
+      height: 35px;
+      box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    }
+
+    .MuiFormControl-root:last-child {
+      .MuiInputBase-root {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .file_list {
+    width: 100%;
+    height: calc(100vh - 330px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .th {
+      margin-top: 15px;
+      padding: 9px 16px 9px 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-bottom: 2px solid var(--text-color);
+
+      .col {
+        width: 100%;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--text-color);
+
+        &:nth-child(1) {
+          max-width: 185px;
+          text-align: end;
+        }
+
+        &:nth-child(2) {
+          max-width: 845px;
+          text-align: end;
+        }
+
+        &:nth-child(3) {
+          max-width: 100px;
+          text-align: end;
+        }
+      }
+    }
+
+    .tr {
+      padding: 9px 16px 9px 35px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-bottom: 2px solid var(--text-color);
+      transition: all .3s linear;
+
+      .col {
+        width: 100%;
+        font-size: 18px;
+        line-height: 21px;
+        color: var(--text-color);
+
+        &:nth-child(1) {
+          margin-right: 35px;
+          display: flex;
+          align-items: center;
+          max-width: 48px;
+        }
+
+        &:nth-child(2) {
+          max-width: 185px;
+          text-align: start;
+        }
+
+        &:nth-child(3) {
+          max-width: 845px;
+          text-align: end;
+        }
+
+        &:nth-child(4) {
+          max-width: 100px;
+          text-align: end;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .file-enter-active {
+      animation: file-enter .3s forwards;
+    }
+
+    @keyframes file-enter {
+      0% {
+        opacity: 0;
+        transform: translateY(-30%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px; /* ширина для вертикального скролла */
+      height: 4px; /* высота для горизонтального скролла */
+      background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #1976d2;
+      border-radius: 4px;
+    }
+  }
+}
+
+.drop_area {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 90px);
+  font-size: 40px;
+  border: dashed 2px var(--text-color);
+}
